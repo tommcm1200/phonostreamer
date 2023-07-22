@@ -22,25 +22,32 @@ mount="stream.ogg",
 name="myStation Main Stream", description="The myStation main stream.",
 phono)
 
+output.icecast(%fdkaac,
+host="localhost",port=8000,password="J5FeedBack",
+mount="stream.aac",
+name="myStation Main Stream", description="The myStation main stream.",
+phono)
+
 # flac = %flac(samplerate=44100,
 #         channels=2,
 #         compression=5,
 #         bits_per_sample=16)
 
-output.icecast(%ogg(
-    %flac(
-        samplerate=44100,
-        channels=2,
-        compression=5,
-        bits_per_sample=16
-        )
-    ), 
-    mount="/phono", 
-    name="Phono", 
-    format="audio/ogg", 
-    description="Turntable FLAC", 
-    host = "localhost", 
-    port=8000, 
-    password="J5FeedBack", 
-    genre = "Misc", 
-    phono)
+# output.icecast(%ogg(
+#     %flac(
+#         samplerate=44100,
+#         channels=2,
+#         compression=5,
+#         bits_per_sample=16
+#         )
+#     ), 
+#     mount="/phono", 
+#     name="Phono", 
+#     format="audio/ogg", 
+#     description="Turntable FLAC", 
+#     host = "localhost", 
+#     port=8000, 
+#     password="J5FeedBack", 
+#     genre = "Misc", 
+#     phono
+# )

@@ -44,7 +44,7 @@ phono)
 
 output.icecast(%ogg(%flac), 
 host="localhost",port=8000,password="J5FeedBack",
-mount="stream.ogg",
+mount="stream.flac",
 name="myStation Main Stream", description="The myStation main stream.",
 phono
 )

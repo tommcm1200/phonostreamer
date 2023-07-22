@@ -28,13 +28,13 @@ phono)
 # name="myStation Main Stream", description="The myStation main stream.",
 # phono)
 
-output.icecast(%ffmpeg(format="mpegts",
-  %audio(codec="libfdk_aac",samplerate=22050,b="32k",
-         afterburner=1,profile="aac_he_v2")),
-host = "localhost", port = 8000,
-password = "J5FeedBack", mount = "stream.mp3",
-name="myStation Main Stream", description="The myStation main stream.",
-phono)
+# output.icecast(%ffmpeg(format="mpegts",
+#   %audio(codec="libfdk_aac",samplerate=22050,b="32k",
+#          afterburner=1,profile="aac_he_v2")),
+# host = "localhost", port = 8000,
+# password = "J5FeedBack", mount = "stream.mp3",
+# name="myStation Main Stream", description="The myStation main stream.",
+# phono)
 
 
 # flac = %flac(samplerate=44100,
@@ -42,21 +42,21 @@ phono)
 #         compression=5,
 #         bits_per_sample=16)
 
-# output.icecast(%ogg(
-#     %flac(
-#         samplerate=44100,
-#         channels=2,
-#         compression=5,
-#         bits_per_sample=16
-#         )
-#     ), 
-#     mount="/phono", 
-#     name="Phono", 
-#     format="audio/ogg", 
-#     description="Turntable FLAC", 
-#     host = "localhost", 
-#     port=8000, 
-#     password="J5FeedBack", 
-#     genre = "Misc", 
-#     phono
-# )
+output.icecast(%ogg(
+    %flac(
+        samplerate=44100,
+        channels=2,
+        compression=5,
+        bits_per_sample=16
+        )
+    ), 
+    mount="/phono", 
+    name="Phono", 
+    format="audio/ogg", 
+    description="Turntable FLAC", 
+    host = "localhost", 
+    port=8000, 
+    password="J5FeedBack", 
+    genre = "Misc", 
+    phono
+)

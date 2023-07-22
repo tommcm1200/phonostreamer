@@ -43,13 +43,8 @@ phono)
 #         bits_per_sample=16)
 
 output.icecast(%ogg(%flac), 
-    mount="/phono", 
-    name="Phono", 
-    format="audio/ogg", 
-    description="Turntable FLAC", 
-    host = "localhost", 
-    port=8000, 
-    password="J5FeedBack", 
-    genre = "Misc", 
-    phono
+host="localhost",port=8000,password="J5FeedBack",
+mount="stream.ogg",
+name="myStation Main Stream", description="The myStation main stream.",
+phono
 )

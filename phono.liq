@@ -15,3 +15,9 @@ host = "localhost", port = 8000,
 password = "J5FeedBack", mount = "stream.mp3",
 name="myStation Main Stream", description="The myStation main stream.",
 phono)
+
+output.icecast(%vorbis,
+host="localhost",port=8000,password="J5FeedBack",
+mount="stream.ogg",
+name="myStation Main Stream", description="The myStation main stream.",
+full)

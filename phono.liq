@@ -16,11 +16,18 @@ password = "J5FeedBack", mount = "stream.mp3",
 name="myStation Main Stream", description="The myStation main stream.",
 phono)
 
-output.icecast(%vorbis,
+# output.icecast(%vorbis,
+# host="localhost",port=8000,password="J5FeedBack",
+# mount="stream.ogg",
+# name="myStation Main Stream", description="The myStation main stream.",
+# phono)
+
+output.icecast(%ogg(%flac), 
 host="localhost",port=8000,password="J5FeedBack",
-mount="stream.ogg",
+mount="stream.flac",
 name="myStation Main Stream", description="The myStation main stream.",
-phono)
+phono
+)
 
 # output.icecast(%fdkaac(channels=2, samplerate=44100, bandwidth="auto", bitrate=64, afterburner=false, aot="mpeg2_he_aac_v2", transmux="adts", sbr_mode=false),
 # host="localhost",port=8000,password="J5FeedBack",
@@ -42,9 +49,4 @@ phono)
 #         compression=5,
 #         bits_per_sample=16)
 
-output.icecast(%ogg(%flac), 
-host="localhost",port=8000,password="J5FeedBack",
-mount="stream.flac",
-name="myStation Main Stream", description="The myStation main stream.",
-phono
-)
+

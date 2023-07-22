@@ -19,3 +19,9 @@ sudo make install
 sudo ldconfig
 
 
+
+
+/home/pi/phonostreamer/phono.liq
+
+chmod 777 /run/liquidsoap
+/etc/init.d/liquidsoap start

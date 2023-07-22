@@ -22,7 +22,10 @@ phono)
 # name="myStation Main Stream", description="The myStation main stream.",
 # phono)
 
-output.icecast(%ogg(%flac), 
+output.icecast(%ogg(%flac(samplerate=44100,
+        channels=2,
+        compression=5,
+        bits_per_sample=16)), 
 host="localhost",port=8000,password="J5FeedBack",
 mount="stream.flac",
 name="myStation Main Stream", description="The myStation main stream.",
@@ -44,7 +47,7 @@ phono
 # phono)
 
 
-# flac = %flac(samplerate=44100,
+# %flac(samplerate=44100,
 #         channels=2,
 #         compression=5,
 #         bits_per_sample=16)

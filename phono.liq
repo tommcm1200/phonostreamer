@@ -22,7 +22,8 @@ mount="stream.ogg",
 name="myStation Main Stream", description="The myStation main stream.",
 phono)
 
-output.icecast(%fdkaac(channels=2,bitrate=64),
+output.icecast(%fdkaac(channels=2, samplerate=44100, bitrate=64,
+afterburner=false, transmux="adts", sbr_mode=false),
 host="localhost",port=8000,password="J5FeedBack",
 mount="stream.aac",
 name="myStation Main Stream", description="The myStation main stream.",

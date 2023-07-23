@@ -1,4 +1,4 @@
-#!/usr/bin/liquidsoap
+#!/home/pi/.opam/default/bin/liquidsoap
 # set the path and permissions for the logfile
 set("log.file.path","/var/log/liquidsoap/phono.log")
 set("log.file.perms",777)

@@ -16,8 +16,8 @@ sudo apt-get install icecast2 pkg-config autoconf automake libtool yasm opam
 
 # Install LiquidSoap through OPAM not apt-get
 opam init
-opam depext ffmpeg liquidsoap liquidsoap-daemon fdkaac cry
-opam install ffmpeg liquidsoap liquidsoap-daemon fdkaac cry
+opam depext ffmpeg liquidsoap liquidsoap-daemon cry lame ogg flac alsa
+opam install ffmpeg liquidsoap liquidsoap-daemon fdkaac cry lame ogg flac alsa
 
 
 <!-- 

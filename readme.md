@@ -16,8 +16,14 @@ sudo apt-get install icecast2 pkg-config autoconf automake libtool yasm opam
 
 # Install LiquidSoap through OPAM not apt-get
 opam init
-opam depext ffmpeg liquidsoap liquidsoap-daemon cry lame ogg flac alsa
-opam install ffmpeg liquidsoap liquidsoap-daemon fdkaac cry lame ogg flac alsa
+opam depext ffmpeg liquidsoap  cry lame ogg flac alsa
+opam install ffmpeg liquidsoap fdkaac cry lame ogg flac alsa
+
+cd ~
+git clone https://github.com/savonet/liquidsoap-daemon.git
+cd ~/liquidsoap-daemon
+./daemonize-liquidsoap.sh /home/pi/phonostreamer/phono.liq
+sudo systemctl start phono-liquidsoap
 
 
 <!-- 

@@ -6,21 +6,12 @@ set("log.unix_timestamps",true)
 #input from soundcard
 phono = input.alsa(bufferize=true,fallible=false,device="plughw:1,0")
 #stream it to local icecast, default port and password
-# output.icecast(%ogg(%flac(samplerate=44100,channels=2,compression=5,bits_per_sample=16)), mount="/phono", name="Phono", format="audio/ogg", description="Turntable FLAC", url="http://192.168.7.155&#8221", genre = "Misc", phono)
-# output.icecast(%ogg(%flac(samplerate=44100,channels=2,compression=5,bits_per_sample=16)), mount="/phono", name="Phono", format="audio/ogg", description="Turntable FLAC", host = "localhost", port=8000, password="J5FeedBack", genre = "Misc", phono)
 
-# output.icecast(%mp3.vbr,compression=5,bits_per_sample=16, mount="/phono", name="Phono", description="Turntable FLAC", host = "localhost", port=8000, password="J5FeedBack", phono)
 output.icecast(%mp3(bitrate=320),
 host = "localhost", port = 8000,
 password = "J5FeedBack", mount = "stream.mp3",
-name="myStation Main Stream", description="The myStation main stream.",
+name="Phono Stream", description="Phono Stream.",
 phono)
-
-# output.icecast(%vorbis,
-# host="localhost",port=8000,password="J5FeedBack",
-# mount="stream.ogg",
-# name="myStation Main Stream", description="The myStation main stream.",
-# phono)
 
 output.icecast(%ogg(%flac(samplerate=44100,
         channels=2,
@@ -28,7 +19,7 @@ output.icecast(%ogg(%flac(samplerate=44100,
         bits_per_sample=16)), 
 host="localhost",port=8000,password="J5FeedBack",
 mount="stream.flac",
-name="myStation Main Stream", description="The myStation main stream.",
+name="Phono Stream", description="Phono Stream.",
 phono
 )
 

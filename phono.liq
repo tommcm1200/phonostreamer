@@ -23,11 +23,11 @@ name="Phono Stream", description="Phono Stream.",
 phono
 )
 
-output.icecast(%fdkaac(channels=2, samplerate=44100, bandwidth="auto"),
-host="localhost",port=8000,password="password",
-mount="stream.aac",
-name="Phono Stream", description="Phono Stream.",
-phono)
+# output.icecast(%fdkaac(channels=2, samplerate=44100, bandwidth="auto"),
+# host="localhost",port=8000,password="password",
+# mount="stream.aac",
+# name="Phono Stream", description="Phono Stream.",
+# phono)
 
 # output.icecast(%ffmpeg(format="mpegts",
 #   %audio(codec="libfdk_aac",samplerate=22050,b="32k",

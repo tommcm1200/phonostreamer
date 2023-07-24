@@ -9,7 +9,7 @@ phono = input.alsa(bufferize=true,fallible=false,device="plughw:1,0")
 
 output.icecast(%mp3(bitrate=320),
 host = "localhost", port = 8000,
-password = "J5FeedBack", mount = "stream.mp3",
+password = "password", mount = "stream.mp3",
 name="Phono Stream", description="Phono Stream.",
 phono)
 
@@ -17,7 +17,7 @@ output.icecast(%ogg(%flac(samplerate=44100,
         channels=2,
         compression=5,
         bits_per_sample=16)), 
-host="localhost",port=8000,password="J5FeedBack",
+host="localhost",port=8000,password="password",
 mount="stream.flac",
 name="Phono Stream", description="Phono Stream.",
 phono

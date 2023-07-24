@@ -23,7 +23,7 @@ name="Phono Stream", description="Phono Stream.",
 phono
 )
 
-output.icecast(%fdkaac(channels=2, samplerate=44100, bandwidth="auto", bitrate=64, afterburner=false, aot="mpeg2_he_aac_v2", transmux="adts", sbr_mode=false),
+output.icecast(%fdkaac(channels=2, samplerate=44100, bandwidth="auto"),
 host="localhost",port=8000,password="password",
 mount="stream.aac",
 name="Phono Stream", description="Phono Stream.",

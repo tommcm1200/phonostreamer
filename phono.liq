@@ -33,7 +33,7 @@ phono
 #   %audio(codec="libfdk_aac",samplerate=22050,b="32k",
 #          afterburner=1,profile="aac_he_v2")),
 # host = "localhost", port = 8000,
-# password = "J5FeedBack", mount = "stream.mp3",
+# password = "password", mount = "stream.mp3",
 # name="myStation Main Stream", description="The myStation main stream.",
 # phono)
 
